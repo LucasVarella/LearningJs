@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>JavaScript 2</title>
+        <script>
+
+            let counter = 0;
+
+            function count(){
+                counter++;
+                const h1 = document.querySelector('h1');
+                h1.innerHTML = counter;
+
+                if (counter % 10 === 0){
+                    alert(`Count is now ${counter}`);
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function (){
+                document.querySelector('button').onclick = count;
+            });
+            
+            
+        </script>
+    </head>
+    <body>
+        <h1>0</h1>
+        <button>Count</button>
+    </body>
+</html>
